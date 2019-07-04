@@ -1,4 +1,4 @@
-let money, time;
+let money, time
 
 function detectDayBudget() {
    money = +prompt('Ваш бюджет на месяц?', ''); 
@@ -72,9 +72,12 @@ function checkSavings() {
 checkSavings();
 
 function chooseOptExpenses() {
-    appData.optionalExpenses[1] = +prompt("Статья необязательных расходов?", '');
-    appData.optionalExpenses[2] = +prompt("Статья необязательных расходов?", '');
-    appData.optionalExpenses[3] = +prompt("Статья необязательных расходов?", '');
+
+for (i = 1 ; i <4; i++ ) {
+     let optionExpense = prompt("Статья необязательных расходов?", '');
+   appData.optionalExpenses[i] = optionExpense;
+}
+ 
 };
 
 chooseOptExpenses();
